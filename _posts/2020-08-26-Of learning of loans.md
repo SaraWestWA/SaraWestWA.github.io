@@ -42,7 +42,7 @@ In the end the best model I created was a Logistic Regression model using SMOTE 
 
 Here's an easier way to look at the information for my best model.
 
-![Best_CM](https://github.com/SaraWestWA/SaraWestWA.github.io/blob/master/assets/img/Best%20Model%20Confusion%20Matrix.jpg)
+![Best_CM](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Best%20Model%20Confusion%20Matrix.jpg)
 
 Unless TVS wants to sell a large percentage of their personal loans to another lender, my models are not particularly useful. However, school projects are intended to be learning experiences, so the most important goal was achieved.
 
