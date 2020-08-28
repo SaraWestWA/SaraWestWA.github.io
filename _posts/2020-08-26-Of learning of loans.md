@@ -5,7 +5,12 @@ subtitle: Misadventures in Learning
 
 ---
 ## How it all started
-
+[TP_Shap](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20TP.jpg)
+[TP_Row](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20True%2B.jpg)
+[RF_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20RF.png)
+[LR_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20LR.png)
+[XGB_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20XGB.png)
+[LR_Confusion Matrix](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20LR%20SMOTE%20Confusion%20Matrix.png)
 
 Remember color-by-number from childhood? Some kids hated those. Me, I had my mother make regular pictures into color-by-number, now I knew exactly what to do! Fast forward a few years. “Pick a topic for your paper…”. That’s the hardest part, then to make it long enough... I would rather prove a theorem, thank you.
 
@@ -20,11 +25,9 @@ The data set is comprised of information on TVS customers who have already taken
 
 There is no data available about the people whose loan applications were denied. Hence, defaulters cannot be compared to the denied clients to find similarities. All of the clients have already passed through the TVS loan approval process.
 
-Initially there were about 120,000 clients listed in my data set, with 32 possible pieces of non-identifying information about each one. This client information is referred to as features or columns. Several features with information gathered after the first payment date were removed. In addition, the TVS data was missing a lot of information, which required dropping both clients and columns with too many holes. Now there were about 85,000 clients and 17 columns of information.
+Initially there were about 120,000 clients listed in my data set, with 32 possible pieces of non-identifying information about each one. This client information is referred to as features or columns. The TVS data was missing a lot of information, both clients and columns with too many holes to be dropped. Several other columns with information gathered after the loan was granted had to be dropped as well. Now there were about 85,000 clients and 11 columns of information.
 
 Now it was time to begin creating a model to detect defaulters. The baselines for all of my basic models were abismal at 0. None of the models identified a single defaulter!
-
-![Simple_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Simple%20Models.jpg)
 
 ### Balancing the Data
 I tried two techniques for balancing the data. Downsampling was done by cutting down list of the non-defaulters to approximately the same number as defaulters. The resulting models found 79-89% of the defaulters! Unfortunately, they also labeled 74-89% of the other clients defaulters. Better, but still far from useful.
