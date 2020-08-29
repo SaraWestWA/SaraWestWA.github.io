@@ -39,21 +39,22 @@ I also created a Random Forest model. While it performed well finding 89% of the
 
 ![RF_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20RF.png)
 
-Unless TVS wants to sell a large percentage of their personal loans to another lender, my models are not particularly useful. However, school projects are intended to be learning experiences, so the most important goal was achieved.
+
 
 ### Let's Pretend
-Let's pretend for a moment that Random Forest model I genenerated was actually fantastic. TVS adopts my model and a client wants to know why he was denied a loan.
+Let's pretend for a moment that Random Forest model I generated was actually fantastic. TVS considers adopting my model, but the bankers need more information about why clients are predicted to default.
 
 #####Client Information
-![TP_Row](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20True%2B.jpg)
+![FP_Row](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20False-.jpg)
 
-"We plugged your information into our nifty formula and it said not to give you a loan." Isn't going to work. However, there is a helpful way to display how the model selected it's results. This Shapley, not shapely, plot will help the banker descibe the reason behind the denial.
+"The mysterious black box predicts that this client will default" isn't going to work. However, there is a helpful way to illustrate how the model selected it's results. This Shapley, not shapely, plot will help the banker understand which factors are most important.
 
-![TP_Shap](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20TP.jpg)
+![FP_Shap](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20FP.jpg)
 
+This client is young, has no secured loans with TVS, and wants to purchase a trailer for $39,000, all of these factors are going against him. His location and not already having an unsecured loan with TVS are in his favor.
 
-"Sir, you are self-employed with no history of taking out unsecured loans, in addition to all of this other information we didn't share with our data scientist we have decided that it is not advisable for us to extend additional credit at this time."
-
+### The Conclusion
+Unless TVS wants to sell a large percentage of their personal loans to another lender, my models are not particularly useful. However, school projects are intended to be learning experiences, so the most important goal was achieved.
 
 
 #### Other useful information
