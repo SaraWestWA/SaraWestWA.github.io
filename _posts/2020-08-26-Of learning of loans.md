@@ -2,13 +2,13 @@
 layout: post
 title: Creating a Predictive Model
 subtitle: Misadventures in Learning
-
+cover-img: /assets/img/sonya-lynne-siaZOhMQsMM-unsplash.jpg
 ---
 ## How it all started
 
 Remember color-by-number from childhood? Some kids hated those. Me, I had my mother make regular pictures into color-by-number, now I knew exactly what to do! Fast forward a few years. “Pick a topic for your paper…”. That’s the hardest part, then to make it long enough... I would rather prove a theorem, thank you.
 
-Fast forward many more years; I have forgotten almost everything about proving theorems. Hence, I am studying Data Science at Lambda School. It’s time to begin my Unit 2 Build Project. “Pick a data set…” Ugh, the worst part. I found this data set on Kaggle [TVS_Loan_Default](https://www.kaggle.com/sjleshrac/tvs-loan-default), it seemed tidy and was brand new. I was so busy learning the mechanics from my lessons, I didn’t notice a problem. Little did I know, a highly imbalanced data isn’t a great choice for a beginner. Trying to find a way to distinguish a tiny amount of data from all of the rest proved to be tricky. I learned about a new technique. Soon everything was going swimmingly. Then, the weekend before the project was due I happened upon a bit of information that set off that little niggling feeling… Sure enough, I had misunderstood how to apply the new technique. What I thought was working well was hardly working at all… I was back to looking for needles in a pin stack, everything looked alike.
+Fast forward many more years; I have forgotten almost everything about proving theorems. Hence, I am studying Data Science at Lambda School. It’s time to begin my Unit 2 Build Project. “Pick a data set…” Ugh, the worst part. I found this data set on Kaggle, [TVS Loan Default](https://www.kaggle.com/sjleshrac/tvs-loan-default), it seemed tidy and was brand new. I was so busy learning the mechanics from my lessons, I didn’t notice a problem. Little did I know, a highly imbalanced data isn’t a great choice for a beginner. Trying to find a way to distinguish a tiny amount of data from all of the rest proved to be tricky. I learned about a new technique. Soon everything was going swimmingly. Then, the weekend before the project was due I happened upon a bit of information that set off that little niggling feeling… Sure enough, I had misunderstood how to apply the new technique. What I thought was working well was hardly working at all… I was back to looking for needles in a pin stack, everything looked alike.
 
 ## The Project
 ### The Data
@@ -25,19 +25,20 @@ Now it was time to begin creating a model to detect defaulters. The baselines fo
 
 ### Creating Models
 I tried two techniques for balancing the data. Downsampling was done by cutting down list of the non-defaulters to approximately the same number as defaulters. Downsampling generated my best gradient boosting model. The resulting baseline for defaulters was 89%, however it also predicted that 89% of all clients were defaulters.
-![XGB_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20XGB.png)
+
+![XGB_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20XGB.png){: .mx-auto.d-block :}
 
 SMOTE, Synthetic Minority Oversampling Technique, SMOTE works the opposite of downsampling. SMOTE was used to create a fictional population of defaulters to balance out the non-defaulters. It sounds a little fanciful, but is proven to be legitimate in the world of data science. Using SMOTE with a linear regression model gave my best results. On the test data the baseline for deafaulters was 59%, with 43% of clients overall labeled as defaulters.
 
-![LR_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20LR.png)
+![LR_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20LR.png){: .mx-auto.d-block :}
 
 Here's an easier way to look at the information for my best model.
 
-![LR_Confusion Matrix](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20LR%20SMOTE%20Confusion%20Matrix.png)
+![LR_Confusion Matrix](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20LR%20SMOTE%20Confusion%20Matrix.png){: .mx-auto.d-block :}
 
 I also created a Random Forest model. While it performed well finding 89% of the defaulters, it also predicted that 89% of all clients were defaulters. Certainly not useful.
 
-![RF_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20RF.png)
+![RF_Models](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20RF.png){: .mx-auto.d-block :}
 
 
 
@@ -45,11 +46,11 @@ I also created a Random Forest model. While it performed well finding 89% of the
 Let's pretend for a moment that Random Forest model I generated was actually fantastic. TVS considers adopting my model, but the bankers need more information about why clients are predicted to default.
 
 #####Client Information
-![FP_Row](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20False-.jpg)
+![FP_Row](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20False-.jpg){: .mx-auto.d-block :}
 
 "The mysterious black box predicts that this client will default" isn't going to work. However, there is a helpful way to illustrate how the model selected it's results. This Shapley, not shapely, plot will help the banker understand which factors are most important.
 
-![FP_Shap](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20FP.jpg)
+![FP_Shap](https://raw.githubusercontent.com/SaraWestWA/SaraWestWA.github.io/master/assets/img/Unit%202%20Shap%20FP.jpg){: .mx-auto.d-block :}
 
 This client is young, has no secured loans with TVS, and wants to purchase a trailer for $39,000, all of these factors are going against him. His location and not already having an unsecured loan with TVS are in his favor.
 
@@ -61,9 +62,9 @@ Unless TVS wants to sell a large percentage of their personal loans to another l
 
 Find my raw data here: [TVS](https://raw.githubusercontent.com/SaraWestWA/DS-Unit-2-Applied-Modeling/master/TVS.csv)
 
-Find the data on Kaggle:
-
 Take a peek at my code here: [Build_Notebook](https://github.com/SaraWestWA/DS-Unit-2-Applied-Modeling/blob/master/module4-model-interpretation/SW_DPSP7_Build_2.ipynb)
+
+<span>Photo by <a href="https://unsplash.com/@sonyalynne?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sonya Lynne</a> on <a href="https://unsplash.com/s/photos/crayon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
 ##### Eat honey for it is good; honey from the comb is sweet to taste.
 Proverbs 24:13 paraphrase
