@@ -70,8 +70,8 @@ Take a peek at my code here: [Build_Notebook](https://github.com/SaraWestWA/DS-U
 
 <span>Photo by <a href="https://unsplash.com/@sonyalynne?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sonya Lynne</a> on <a href="https://unsplash.com/s/photos/crayon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-##### Eat honey for it is good; honey from the comb is sweet to taste.
-Proverbs 24:13 paraphrase
+##### The Teacher was considered wise...studying and classifying...
+Ecclesiastes 12:9 paraphrase
 
 
 
