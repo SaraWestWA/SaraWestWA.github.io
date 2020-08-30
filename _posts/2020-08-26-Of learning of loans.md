@@ -69,6 +69,7 @@ Unless TVS wants to sell a large percentage of their personal loans to another l
 
 ##### Other useful information
 Find my raw data here: [TVS](https://raw.githubusercontent.com/SaraWestWA/DS-Unit-2-Applied-Modeling/master/TVS.csv)
+
 Take a peek at my code here: [Build_Notebook](https://github.com/SaraWestWA/DS-Unit-2-Applied-Modeling/blob/master/module4-model-interpretation/SW_DPSP7_Build_2.ipynb)
 
 <span>Photo by <a href="https://unsplash.com/@sonyalynne?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sonya Lynne</a> on <a href="https://unsplash.com/s/photos/crayon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
